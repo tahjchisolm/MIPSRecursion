@@ -10,3 +10,4 @@
 		sub $v0, 10 # print integer
 		sub $a0, 64 # 0 
 		syscall
+
