@@ -28,3 +28,6 @@
 
 		add $a0, 4 # 8
 		syscall
+
+		sub $a0, 8 # 0
+		syscall
