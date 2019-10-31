@@ -64,3 +64,8 @@ invalid:
 	j sum
 
 exit:
+	li $v0, 1
+	move $a0, $s7
+	syscall
+	li $v0, 10 # terminate program
+	syscall
