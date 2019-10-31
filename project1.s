@@ -55,4 +55,8 @@ lower:
 	subi $a0, $a0, 87
 	j sum
 
+sum:
+	addu $s7, $s7, $a0
+	j back
+
 
