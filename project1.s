@@ -50,4 +50,9 @@ upper:
 	subi $a0, $a0, 55
 	j sum
 
+lower:
+	bgt $a0, 118, invalid
+	subi $a0, $a0, 87
+	j sum
+
 
