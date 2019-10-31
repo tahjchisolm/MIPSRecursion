@@ -8,7 +8,7 @@
 
 main:
 	li $v0, 4
-	la $a0, myMessage
+	la $a0, myMessage # print myMessage
 	syscall
 	
 	li $v0, 8 # take in input
@@ -17,3 +17,6 @@ main:
 	move $t0, $a0 # save string to t0
 	syscall
 
+	li $v0, 4
+	la $a0, newline # start new line
+	syscall
