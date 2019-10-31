@@ -26,7 +26,7 @@ main:
 looping:
 
 	lb $a0, 0($t0) # load each char
-	beq $a0, exit # loop ends if char is null
+	beq $a0, $zero, exit # loop ends if char is null
 
 	li $v0, 1 # print char val
 	syscall
@@ -47,12 +47,12 @@ back:
 
 upper:
 	blt $a0, 65, invalid
-	subi $a0, $a0, 55
+	addi $a0, $a0, -55
 	j sum
 
 lower:
 	bgt $a0, 118, invalid
-	subi $a0, $a0, 87
+	addi $a0, $a0, -87
 	j sum
 
 sum:
