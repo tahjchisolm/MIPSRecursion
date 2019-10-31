@@ -45,4 +45,9 @@ back:
 	addi $t0, $t0, 1
 	j looping
 
+upper:
+	blt $a0, 65, invalid
+	subi $a0, $a0, 55
+	j sum
+
 
