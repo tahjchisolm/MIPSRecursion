@@ -33,3 +33,11 @@ looping:
 
 	blt $a0, 87, upper # uppercase
 	bgt $a0, 96, lower # lowercase
+
+	j sum
+
+back:
+
+	li $v0, 4
+	la $a0, newline
+	syscall
