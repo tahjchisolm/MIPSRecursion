@@ -5,6 +5,11 @@
 	myMessage: .asciiz "Enter a 10 character string"
 	buffer: .space 10
 .text
-	main:
 
+main:
+	li $v0, 4
+	la $a0, myMessage
+	syscall
+	
+	
 
