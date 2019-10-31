@@ -38,9 +38,9 @@ looping:
 
 back:
 
-	li $v0, 4
-	la $a0, newline
-	syscall
+	#li $v0, 4
+	#la $a0, newline
+	#syscall
 
 	addi $t0, $t0, 1
 	j looping
