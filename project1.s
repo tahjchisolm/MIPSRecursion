@@ -23,4 +23,9 @@ main:
 
 	li $s7, 0 # set sum to 0
 
+looping:
+
+	lb $a0, 0($t0) # load each char
+	beq $a0, exit # loop ends if char is null
+
 
