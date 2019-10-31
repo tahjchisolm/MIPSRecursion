@@ -28,4 +28,8 @@ looping:
 	lb $a0, 0($t0) # load each char
 	beq $a0, exit # loop ends if char is null
 
+	li $v0, 1 # print char val
+	syscall
 
+	blt $a0, 87, upper # uppercase
+	bgt $a0, 96, lower # lowercase
