@@ -59,4 +59,8 @@ sum:
 	addu $s7, $s7, $a0
 	j back
 
+invalid:
+	li $a0, 0
+	j sum
 
+exit:
