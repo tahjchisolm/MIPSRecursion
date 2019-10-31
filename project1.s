@@ -20,3 +20,7 @@ main:
 	li $v0, 4
 	la $a0, newline # start new line
 	syscall
+
+	li $s7, 0 # set sum to 0
+
+
