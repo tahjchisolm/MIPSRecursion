@@ -11,5 +11,9 @@ main:
 	la $a0, myMessage
 	syscall
 	
-	
+	li $v0, 8 # take in input
+	la $a0, buffer # load byte space
+	li $a1, 11 # create space for string
+	move $t0, $a0 # save string to t0
+	syscall
 
