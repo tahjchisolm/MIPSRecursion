@@ -2,7 +2,7 @@
 
 .data
 	newline: .asciiz "\n"
-	myMessage: .asciiz "Enter a 10 character string"
+	myMessage: .asciiz "Enter a 10 character string\n"
 	buffer: .space 10
 .text
 
