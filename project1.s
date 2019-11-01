@@ -31,6 +31,7 @@ looping:
 	#li $v0, 1 # print char val
 	#syscall
 
+	blt $a0, 58, number
 	blt $a0, 87, upper # uppercase
 	bgt $a0, 96, lower # lowercase
 
@@ -53,6 +54,11 @@ upper:
 lower:
 	bgt $a0, 118, invalid
 	addi $a0, $a0, -87
+	j sum
+
+number:
+	blt $a0, 49, invalid
+	addi $a0, $a0, -48
 	j sum
 
 sum:
