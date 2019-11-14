@@ -17,3 +17,7 @@ main:
 	li $a1, 11 # create space for string
 	move $t0, $a0 # save string to t0
 	syscall
+
+	li $v0, 4
+	la $a0, newline # start new line
+	syscall
