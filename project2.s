@@ -21,3 +21,10 @@ main:
 	li $v0, 4
 	la $a0, newline # start new line
 	syscall
+
+exit:
+	li $v0, 1
+	move $a0, $s7
+	syscall
+	li $v0, 10 # terminate program
+	syscall
