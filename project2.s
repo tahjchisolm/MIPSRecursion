@@ -22,6 +22,11 @@ main:
 	la $a0, newline # start new line
 	syscall
 
+loop:
+
+	lb $a0, 0($t0) # load each char
+	beq $a0, $zero, exit # loop ends if char is null
+
 exit:
 	li $v0, 1
 	move $a0, $s7
