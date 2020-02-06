@@ -1,5 +1,6 @@
 // Creating
 #include <iostream>
+#include <fstream>
 
 using namespace std;
 
@@ -46,6 +47,27 @@ int main()
 			n = arr[j][k];
 
 	// Hard drive Benchmark
+	// writing into file
+	w = 20000000
+	ofstream myfile;
+	myfile.open ("example.txt");
+	for (int i = 0; i < 250000000; i++)
+		myfile << w;
+	myfile.close();
+
+	// read file
+	string line;
+	ifstream myfile ("example.txt");
+	if (myfile.is_open())
+	{
+		while ( getline (myfile,line) )
+	{
+		// reading
+	}
+	myfile.close();
+	}
+
+	cout << "program has finished";
 	
 
 }
