@@ -1,7 +1,6 @@
-// Creating
 #include <iostream>
 #include <fstream>
-#include memory
+#include <memory>
 #include <chrono>
 
 using namespace std;
@@ -21,10 +20,10 @@ public:
 
 	void Stop()
 	{
-		auto endTimepoint = chrono:high_resolution_clock::now();
+		auto endTimepoint = chrono::high_resolution_clock::now();
 
-		auto start = chromo:: time_point_cast < chrono::microseconds > (m_StartTimepoint).time_since_epoch().count();
-		auto end = chromo:: time_point_cast < chrono::microseconds > (endTimepoint).time_since_epoch().count();
+		auto start = chrono:: time_point_cast < chrono::microseconds > (m_StartTimepoint).time_since_epoch().count();
+		auto end = chrono:: time_point_cast < chrono::microseconds > (endTimepoint).time_since_epoch().count();
 
 		auto duration = end - start;
 		double ms = duration * 0.001;
@@ -32,7 +31,7 @@ public:
 		cout << duration << "us (" << ms << "ms)\n";
 	}
 private: 
-	chrono::time_point< chrono:high_resolution_clock> m_StartTimepoint;
+	chrono::time_point< chrono::high_resolution_clock> m_StartTimepoint;
 };
 
 int main()
@@ -59,9 +58,9 @@ int main()
 	for (int i = 0; i < 1000000000; i++)
 		y *= 2;
 
-	float y = 2;
+	float z = 2;
 	for (int i = 0; i < 1000000000; i++)
-		y /= 2;
+		z /= 2;
 	
 	// Memory Benchmark
 	// create array
@@ -71,14 +70,14 @@ int main()
 			arr[j][k] = 20000000;
 	
 	// read array
-	int = n;
+	int n;
 	for (int j = 0; j < 5; j++)
 		for (int k = 0; k < 1000000000; k++)
 			n = arr[j][k];
 
 	// Hard drive Benchmark
 	// writing into file
-	w = 20000000
+	int w = 20000000;
 	ofstream myfile;
 	myfile.open ("example.txt");
 	for (int i = 0; i < 250000000; i++)
@@ -87,17 +86,19 @@ int main()
 
 	// read file
 	string line;
-	ifstream myfile ("example.txt");
-	if (myfile.is_open())
+	ifstream myfile2 ("example.txt");
+	if (myfile2.is_open())
 	{
-		while ( getline (myfile,line) )
+		while ( getline(myfile2,line) )
 	{
 		// reading
 	}
-	myfile.close();
+	myfile2.close();
 	}
 
-	cout << "program has finished";
+	cout << "program has finished" << endl;
+
+	return 0;
 	
 
 }
