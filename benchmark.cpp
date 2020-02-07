@@ -1,7 +1,10 @@
+// run in terminal with "-std=c++11" as command line flag
+
 #include <iostream>
 #include <fstream>
 #include <memory>
 #include <chrono>
+#include <typeinfo>
 
 using namespace std;
 
@@ -36,9 +39,13 @@ private:
 
 int main()
 {
+
+	cout << "hello" << endl;
+	cout.flush();
+
 	// Int Benchmarks
 	int a = 0; 
-	for (int i = 0; i < 10000000000; i++)
+	for (int i = 0; i < 1000000000; i++)
 		a += 2;
 
 	int b = 2;
@@ -51,7 +58,7 @@ int main()
 
 	// Float Benchmarks
 	float x = 0; 
-	for (int i = 0; i < 10000000000; i++)
+	for (int i = 0; i < 1000000000; i++)
 		x += 2;
 
 	float y = 2;
@@ -97,6 +104,7 @@ int main()
 	}
 
 	cout << "program has finished" << endl;
+	
 
 	return 0;
 	
