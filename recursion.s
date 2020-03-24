@@ -18,6 +18,13 @@ main:
     move $t0, $a0 #string stored in $t0
     syscall
 
+    li $t1, 2839480
+    li $t2, 11
+    div $t1, $t2
+    mfhi $t1 # store remainder
+    addi $s0, $t1, 26 # base N in $s0
+    addiu $s1, $s0, -10 # M in $s1
+
     jr $ra
 
 subprog:
