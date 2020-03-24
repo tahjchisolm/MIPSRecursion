@@ -8,6 +8,10 @@ main:
 
     jal subprog
 
+    la $a0, myMessage
+    li $v0, 4
+    syscall
+
     jr $ra
 
 subprog:
