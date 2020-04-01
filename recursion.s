@@ -63,3 +63,8 @@ endloop2:
 exit:
     li $v0, 10
     syscall
+
+subprgA:
+    addi $s5, $sp, 0
+    add $t0, $s5, $zero
+    move $t9, $ra
