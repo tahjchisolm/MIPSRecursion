@@ -193,3 +193,13 @@ pop:
     beq $sp, $s5, endpop
     addi $sp, $sp, 4
     j pop
+
+endpop:
+    beq $t6, $zero, addNaN
+    j addInt
+
+addNaN:
+    li $v0, 4
+    la $a0, invalidMessage
+    syscall
+    j exit
