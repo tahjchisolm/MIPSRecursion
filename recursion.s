@@ -178,3 +178,11 @@ Bloop3:
     add $t7, $t7, $v0
     addi $t6, $t6, -4
     j subprgC
+
+Bendloop3:
+    li $t6, 1
+    j Bfinish
+
+invalid:
+    add $t6, $zero, $zero
+    j Bfinish
