@@ -52,3 +52,7 @@ loop2:
     la $a1, input
     add $a1, $a1, $t0
     lb $a1, 0($a1)
+
+    sw $a1, 0($sp)
+    addi $t0, $t0, -1
+    j loop2
