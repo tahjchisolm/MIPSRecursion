@@ -186,3 +186,10 @@ Bendloop3:
 invalid:
     add $t6, $zero, $zero
     j Bfinish
+
+Bfinish:
+
+pop:
+    beq $sp, $s5, endpop
+    addi $sp, $sp, 4
+    j pop
