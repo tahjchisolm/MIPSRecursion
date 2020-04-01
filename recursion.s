@@ -136,3 +136,7 @@ Bendloop2:
     sgt $t8, $t6, 12
     or $t7, $t7, $t8
     bne $t7, $zero, invalid
+
+    add $t6, $t4, $zero
+    li $t7, 0
+    addi $t5, $t5, -4
