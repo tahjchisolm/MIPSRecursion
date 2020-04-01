@@ -76,3 +76,10 @@ Aloop:
     li $t1, 44
     bne $a1, $t1, stop
     jal subprgB
+
+    li $v0, 11
+    la $a0, 44
+    syscall
+
+    addi $t0, $t0, 4
+    j Aloop
