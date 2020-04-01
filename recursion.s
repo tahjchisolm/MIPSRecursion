@@ -263,3 +263,10 @@ done:
     mult $a1, $v0
     mflo $v0
     la $s6,($v0)
+
+    la $a0,($s6)
+    li $v0, 1
+    syscall # print myMessage
+
+    la $ra, exit
+    jr $ra
