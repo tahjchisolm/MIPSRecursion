@@ -68,3 +68,7 @@ subprgA:
     addi $s5, $sp, 0
     add $t0, $s5, $zero
     move $t9, $ra
+
+Aloop:
+    beq $t0, $s4, Aendloop
+    lw $a1, 0($t0)
