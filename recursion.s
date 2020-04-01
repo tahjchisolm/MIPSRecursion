@@ -128,3 +128,11 @@ Bloop2:
     beq $t6, $zero, Bendloop2
     addi $t5, $t5, 4
     j Bloop2
+
+Bendloop2:
+    sub $t6, $t4, $t5
+
+    slti $t7, $t6, 0
+    sgt $t8, $t6, 12
+    or $t7, $t7, $t8
+    bne $t7, $zero, invalid
