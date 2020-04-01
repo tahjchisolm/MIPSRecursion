@@ -29,3 +29,7 @@ main:
 loop1:
     addi $t0, $zero, 1000
     beq $s3, $t0, endloop1
+
+    la $a1, input
+    add $a1, $a1, $s3
+    lb $a1, 0($a1)
