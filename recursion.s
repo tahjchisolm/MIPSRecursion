@@ -169,3 +169,8 @@ Bloop3:
     li $a2, 0
     addi $a2, $t5, 4
     sub $a2, $t6, $a2
+    li $s7, 4
+    div $a2, $s7
+    mflo $v1
+    jal subprgC
+    move $ra, $t1
