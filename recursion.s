@@ -89,3 +89,8 @@ stop:
     sw $a1, 0($sp)
     addi $t0, $t0, 4
     j Aloop
+
+Aendloop:
+    jal subprgB
+    move $ra, $t9
+    jr $ra
