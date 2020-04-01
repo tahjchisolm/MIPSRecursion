@@ -115,3 +115,8 @@ Bloop1:
     beq $t6, $zero, Bendloop1
     addi $t4, $t4, -4
     j Bloop1
+
+Bendloop1:
+
+Bloop2:
+    beq $t5, $s5, Bendloop2
