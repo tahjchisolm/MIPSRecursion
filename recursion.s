@@ -26,6 +26,6 @@ main:
     addi $s2, $zero, 0
     add $s3, $s2, $zero
 
-subprog:
-
-    jr $ra
+loop1:
+    addi $t0, $zero, 1000
+    beq $s3, $t0, endloop1
