@@ -56,3 +56,10 @@ loop2:
     sw $a1, 0($sp)
     addi $t0, $t0, -1
     j loop2
+
+endloop2:
+    jal subprgA
+
+exit:
+    li $v0, 10
+    syscall
