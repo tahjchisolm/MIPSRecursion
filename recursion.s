@@ -38,3 +38,8 @@ loop1:
     beq $a1, $t0, endloop1
     addi $s3, $s3, 1
     j loop1
+
+endloop1:
+    addi $s3, $s3, -1
+    add $t0, $s3, $zero
+    addi $s4, $sp, 0
