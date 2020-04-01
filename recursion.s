@@ -101,3 +101,10 @@ subprgB:
     add $t2, $s5, $zero
     addi $t3, $s6, -4
     addi $t2, $t2, -4
+
+    add $t4, $t2, $zero
+    add $t5, $s6, $zero
+
+Bloop1:
+    beq $t4, $t3, Bendloop1
+    lw $a1, 0($t4)
