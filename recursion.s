@@ -108,3 +108,10 @@ subprgB:
 Bloop1:
     beq $t4, $t3, Bendloop1
     lw $a1, 0($t4)
+
+    seq $t6, $a1, 32
+    seq $t7, $a1, 9
+    or $t6, $t6, $t7
+    beq $t6, $zero, Bendloop1
+    addi $t4, $t4, -4
+    j Bloop1
