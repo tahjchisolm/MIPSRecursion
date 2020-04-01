@@ -140,3 +140,7 @@ Bendloop2:
     add $t6, $t4, $zero
     li $t7, 0
     addi $t5, $t5, -4
+
+Bloop3:
+    beq $t6, $t5, Bendloop3
+    lw $a1, 0($t6)
