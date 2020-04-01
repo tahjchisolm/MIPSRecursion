@@ -220,3 +220,10 @@ subprgC:
     slt $a3, $a1, $s7
     and $t8, $t8, $a3
     bne $t8, $zero, uppercase
+
+    li $s7, 97
+    add $s7, $s7, $s1
+    sgt $t8, $a1, 96
+    slt $a3, $a1, $s7
+    and $t8, $t8, $a3
+    bne $t8, $zero, lowercase
