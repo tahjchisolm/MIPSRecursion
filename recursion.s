@@ -232,3 +232,11 @@ subprgC:
     slti $a3, $a1, 58
     and $t8, $t8, $a3
     bne $t8, $zero, number
+
+lowercase:
+    addiu $a1, $a1, -87
+    j findEx
+
+uppercase:
+    addiu $a1, $a1, -55
+    j findEx
