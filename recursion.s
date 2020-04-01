@@ -250,3 +250,11 @@ findEx:
     li $v0, 1
     slt $a3, $t8, $v1
     beq $a3, $zero, done
+
+floop:
+    mult $v0, $s0
+    mflo $v0
+    addi $t8, $t8, 1
+
+    slt $a3, $t8, $v1
+    bne $a3, $zero, floop
