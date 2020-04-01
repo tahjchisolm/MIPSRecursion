@@ -144,3 +144,8 @@ Bendloop2:
 Bloop3:
     beq $t6, $t5, Bendloop3
     lw $a1, 0($t6)
+
+    sgt $t1, $a1, 64
+    addi $a2, $s1, 65
+    slt $t8, $a1, $a2
+    and $a3, $t1, $t8
