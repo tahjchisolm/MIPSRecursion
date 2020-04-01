@@ -174,3 +174,7 @@ Bloop3:
     mflo $v1
     jal subprgC
     move $ra, $t1
+
+    add $t7, $t7, $v0
+    addi $t6, $t6, -4
+    j subprgC
