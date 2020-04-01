@@ -258,3 +258,8 @@ floop:
 
     slt $a3, $t8, $v1
     bne $a3, $zero, floop
+
+done:
+    mult $a1, $v0
+    mflo $v0
+    la $s6,($v0)
