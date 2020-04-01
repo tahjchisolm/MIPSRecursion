@@ -43,3 +43,7 @@ endloop1:
     addi $s3, $s3, -1
     add $t0, $s3, $zero
     addi $s4, $sp, 0
+
+loop2:
+    slt $t1, $t0, $s2
+    bne $t1, $zero, endloop2
