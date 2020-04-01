@@ -120,3 +120,11 @@ Bendloop1:
 
 Bloop2:
     beq $t5, $s5, Bendloop2
+
+    lw $a1, 0($t5)
+    seq $t6, $a1, 32
+    seq $t7, $a1, 9
+    or $t6, $t6, $t7
+    beq $t6, $zero, Bendloop2
+    addi $t5, $t5, 4
+    j Bloop2
