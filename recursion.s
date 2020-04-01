@@ -72,3 +72,7 @@ subprgA:
 Aloop:
     beq $t0, $s4, Aendloop
     lw $a1, 0($t0)
+
+    li $t1, 44
+    bne $a1, $t1, stop
+    jal subprgB
