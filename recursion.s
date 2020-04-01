@@ -203,3 +203,9 @@ addNaN:
     la $a0, invalidMessage
     syscall
     j exit
+
+addInt:
+    li $v0, 1
+    move $a0, $t7
+    syscall
+    j back
